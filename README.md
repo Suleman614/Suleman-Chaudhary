@@ -5,7 +5,7 @@ The site showcases my work in **data science, analytics, predictive modeling**, 
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 - Astro  
 - TailwindCSS  
 - TypeScript / JavaScript  
@@ -14,7 +14,7 @@ The site showcases my work in **data science, analytics, predictive modeling**, 
 
 ---
 
-## 🛠️ Development
+## Development
 To run the site locally:
 
 ```bash
@@ -25,7 +25,8 @@ npm run dev
 The site will be available at:
 http://localhost:4321
 
-Contact
+Contact:
+
 Email: chaudhary.98@buckeyemail.osu.edu
 LinkedIn: https://www.linkedin.com/in/suleman-chaudhary
 GitHub: https://github.com/sulemanchaudhary

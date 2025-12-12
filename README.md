@@ -27,9 +27,10 @@ http://localhost:4321
 
 Contact:
 
-Email: chaudhary.98@buckeyemail.osu.edu
-LinkedIn: https://www.linkedin.com/in/suleman-chaudhary
-GitHub: https://github.com/sulemanchaudhary
+Email: chaudhary.98@buckeyemail.osu.edu  
+LinkedIn: https://www.linkedin.com/in/suleman-chaudhary  
+GitHub: https://github.com/sulemanchaudhary  
+
 
 MIT License (see the LICENSE file for full text)
 

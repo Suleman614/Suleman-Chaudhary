@@ -324,7 +324,7 @@ export default function Portfolio() {
               className="rounded-full gap-2 px-8 glass bg-transparent border-cyan-500/30 hover:border-cyan-500 hover:bg-cyan-500/10"
               asChild
             >
-              <a href="#" download>
+              <a href="/Suleman-Chaudhary-Resume.pdf" download="Suleman_Chaudhary_Resume.pdf">
                 <FileDown className="w-5 h-5" />
                 Download Resume
               </a>
@@ -335,31 +335,31 @@ export default function Portfolio() {
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full glass border-white/20 hover:border-cyan-500 hover:bg-cyan-500/10 bg-transparent transition-all duration-300 w-20 h-20 hover:scale-110"
+              className="rounded-full glass border-white/20 hover:border-cyan-500 hover:bg-cyan-500/10 bg-transparent transition-all duration-300 w-24 h-24 hover:scale-110"
               asChild
             >
               <a href="https://linkedin.com/in/suleman-chaudhary/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-10 h-10" />
+                <Linkedin className="w-12 h-12" />
               </a>
             </Button>
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full glass border-white/20 hover:border-cyan-500 hover:bg-cyan-500/10 bg-transparent transition-all duration-300 w-20 h-20 hover:scale-110"
+              className="rounded-full glass border-white/20 hover:border-cyan-500 hover:bg-cyan-500/10 bg-transparent transition-all duration-300 w-24 h-24 hover:scale-110"
               asChild
             >
               <a href="mailto:Chaudhary.98@Buckeyemail.osu.edu">
-                <Mail className="w-10 h-10" />
+                <Mail className="w-12 h-12" />
               </a>
             </Button>
             <Button
               variant="outline"
               size="icon"
-              className="rounded-full glass border-white/20 hover:border-cyan-500 hover:bg-cyan-500/10 bg-transparent transition-all duration-300 w-20 h-20 hover:scale-110"
+              className="rounded-full glass border-white/20 hover:border-cyan-500 hover:bg-cyan-500/10 bg-transparent transition-all duration-300 w-24 h-24 hover:scale-110"
               asChild
             >
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <Github className="w-10 h-10" />
+                <Github className="w-12 h-12" />
               </a>
             </Button>
           </div>
@@ -421,6 +421,10 @@ export default function Portfolio() {
               {
                 ", which has shaped how I think about strategy, pattern recognition, and performance under pressure. I'm driven by curiosity, continuous learning, and environments where data meaningfully informs decisions."
               }
+            </p>
+            <p className="text-lg text-cyan-400 font-semibold mt-8 leading-relaxed">
+              Actively seeking Data Analyst, Business Analyst, and Data Science internship opportunities for Summer
+              2026.
             </p>
           </div>
         </section>
@@ -556,6 +560,50 @@ export default function Portfolio() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="glass rounded-2xl p-8 border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-500 hover:shadow-xl hover:shadow-emerald-500/20 hover:-translate-y-2 group">
+              <div className="flex items-start justify-between mb-4">
+                <h3 className="text-xl font-semibold group-hover:text-cyan-400 transition-colors">
+                  United States Emissions Breakdown
+                </h3>
+                <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-cyan-400 transition-colors cursor-pointer" />
+              </div>
+              <div className="flex items-center gap-2 mb-3">
+                <div className="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30">
+                  <span className="text-sm font-semibold text-emerald-400">EPA Environmental Analytics</span>
+                </div>
+              </div>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Built an interactive analytics dashboard using EPA emissions data to examine greenhouse gas emissions
+                across the continental United States. Cleaned and aggregated county level data in Databricks using SQL
+                to analyze emissions by state and county, explore population based patterns, and identify regions that
+                contribute disproportionately to total emissions.
+              </p>
+              <div className="mb-4 p-3 rounded-lg bg-muted/30 border border-emerald-500/20">
+                <p className="text-xs text-muted-foreground mb-1">Technical Challenge:</p>
+                <p className="text-sm">
+                  Cleaning messy numeric fields, aggregating large geospatial datasets, and designing clear,
+                  insight-driven visualizations from raw environmental data
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="text-xs px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20">
+                  Databricks
+                </span>
+                <span className="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                  SQL
+                </span>
+                <span className="text-xs px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                  Data Visualization
+                </span>
+                <span className="text-xs px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  Environmental Analytics
+                </span>
+                <span className="text-xs px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                  Geospatial Analysis
+                </span>
+              </div>
+            </div>
+
             <a
               href="https://portfolio-optimization.lovable.app/"
               target="_blank"
@@ -853,7 +901,7 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <a
-              href="https://credentials.databricks.com/your-credential-link"
+              href="/certificates/Databricks-AI-BI.png"
               target="_blank"
               rel="noopener noreferrer"
               className="glass rounded-2xl p-8 border-purple-500/20 hover:border-purple-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1 group cursor-pointer"
@@ -879,7 +927,7 @@ export default function Portfolio() {
             </a>
 
             <a
-              href="https://credentials.databricks.com/your-credential-link"
+              href="/certificates/Databricks-SQL-Analytics.png"
               target="_blank"
               rel="noopener noreferrer"
               className="glass rounded-2xl p-8 border-blue-500/20 hover:border-blue-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1 group cursor-pointer"
@@ -905,7 +953,7 @@ export default function Portfolio() {
             </a>
 
             <a
-              href="https://www.credly.com/badges/your-google-certification"
+              href="/certificates/Google-Data-Analytics.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="glass rounded-2xl p-8 border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-indigo-500/20 hover:-translate-y-1 group cursor-pointer"
@@ -1019,7 +1067,7 @@ export default function Portfolio() {
 
         {/* Contact Section */}
         <section className="fade-in-section">
-          <div className="glass rounded-2xl p-12 text-center border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500">
+          <div className="glass rounded-2xl p-12 text-center border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 mb-12">
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Let's Connect
             </h2>

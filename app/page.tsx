@@ -429,6 +429,69 @@ export default function Portfolio() {
           </div>
         </section>
 
+        {/* Education Section */}
+        <section className="fade-in-section">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-full glass flex items-center justify-center border border-cyan-500/20">
+              <GraduationCap className="w-6 h-6 text-cyan-400" />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Education
+              </h2>
+              <p className="text-sm text-muted-foreground">Academic background</p>
+            </div>
+          </div>
+          <div className="glass rounded-2xl p-8 md:p-12 border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-cyan-500/10 hover:-translate-y-1">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-8">
+              <div>
+                <h3 className="text-2xl font-bold text-foreground mb-2">
+                  The Ohio State University – Fisher College of Business
+                </h3>
+                <p className="text-lg text-cyan-400 font-semibold">B.S. Information Systems</p>
+              </div>
+              {/* CHANGE: Updated styling to match Relevant Coursework section */}
+              <div className="flex flex-col gap-1 text-right shrink-0">
+                <div className="text-xl font-bold text-foreground">Expected Graduation</div>
+                <div className="text-xl font-bold text-foreground">December 2026</div>
+                <div className="text-xl font-bold text-foreground mt-2">GPA: 3.97 • Dean&apos;s List</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-xl font-bold text-foreground mb-4">Relevant Coursework</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div className="text-muted-foreground">
+                  <span className="text-cyan-400 font-semibold">CSE 2123</span> — Data Structures Using Java
+                </div>
+                <div className="text-muted-foreground">
+                  <span className="text-cyan-400 font-semibold">CSE 2111</span> — Modeling & Problem Solving with
+                  Spreadsheets and Databases
+                </div>
+                <div className="text-muted-foreground">
+                  <span className="text-cyan-400 font-semibold">BUSOBA 2320</span> — Statistical Techniques
+                </div>
+                <div className="text-muted-foreground">
+                  <span className="text-cyan-400 font-semibold">BUSOBA 2321</span> — Business Analytics
+                </div>
+                <div className="text-muted-foreground">
+                  <span className="text-cyan-400 font-semibold">BUSMGMT 3332</span> — Predictive Analytics
+                </div>
+                <div className="text-muted-foreground">
+                  <span className="text-cyan-400 font-semibold">CSE 3241</span> — Introduction to Database Systems
+                </div>
+                <div className="text-muted-foreground">
+                  <span className="text-cyan-400 font-semibold">BUSOBA 4331</span> — Data Management & Descriptive
+                  Analytics
+                </div>
+                <div className="text-muted-foreground">
+                  <span className="text-cyan-400 font-semibold">ACCTMIS 3620</span> — Foundations of Information Systems
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Experience Section */}
         <section className="fade-in-section">
           <div className="flex items-center gap-3 mb-8">
@@ -693,7 +756,14 @@ export default function Portfolio() {
                 <h3 className="text-xl font-semibold group-hover:text-cyan-400 transition-colors">
                   NBA Game Prediction
                 </h3>
-                <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-cyan-400 transition-colors cursor-pointer" />
+                <a
+                  href="https://github.com/akhaliq0/NBA-Prediction-Model"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 transition-transform"
+                >
+                  <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-cyan-400 transition-colors cursor-pointer" />
+                </a>
               </div>
               <div className="flex items-center gap-2 mb-3">
                 <div className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30">
@@ -732,7 +802,14 @@ export default function Portfolio() {
             <div className="glass rounded-2xl p-8 border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 hover:shadow-xl hover:shadow-pink-500/20 hover:-translate-y-2 group">
               <div className="flex items-start justify-between mb-4">
                 <h3 className="text-xl font-semibold group-hover:text-cyan-400 transition-colors">SeeWithYou</h3>
-                <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-cyan-400 transition-colors cursor-pointer" />
+                <a
+                  href="https://github.com/SsjRaz/SeeWithYou"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 transition-transform"
+                >
+                  <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-cyan-400 transition-colors cursor-pointer" />
+                </a>
               </div>
               <div className="flex items-center gap-2 mb-3">
                 <div className="px-3 py-1 rounded-full bg-pink-500/20 border border-pink-500/30">

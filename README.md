@@ -1,30 +1,61 @@
-# Data science portfolio (2)
+# Suleman Chaudhary Portfolio
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
-
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/shonensule-7876s-projects/v0-data-science-portfolio)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/rBO5DHswlXl)
+Personal data analytics and data science portfolio built with Next.js and Tailwind CSS.
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+- Single-page portfolio with sections for About, Projects, Skills, Certifications, Leadership, and Contact.
+- Static assets (resume, certificates, images) served from `public/`.
+- Content is authored directly in `app/page.tsx`.
+
+## Tech Stack
+
+- Next.js (App Router)
+- React + TypeScript
+- Tailwind CSS
+- Vercel Analytics
+
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the dev server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Start the production server:
+
+```bash
+npm run start
+```
+
+## Content Updates
+
+- Main content: `app/page.tsx`
+- Global styles: `app/globals.css`
+- Assets: `public/`
+
+### Key Assets
+
+- Resume: `public/Suleman Chaudhary resume .pdf`
+- Certificates:
+  - `public/certificates/Suleman Google Data Analyticis Cert.pdf`
+  - `public/certificates/Suleman AiBi Databricks Cert.png`
+  - `public/certificates/Suleman SQL Analytics Databricks Cert.png`
 
 ## Deployment
 
-Your project is live at:
+This app can be deployed on any Next.js-compatible platform (Vercel, Netlify, etc.).
 
-**[https://vercel.com/shonensule-7876s-projects/v0-data-science-portfolio](https://vercel.com/shonensule-7876s-projects/v0-data-science-portfolio)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.app/chat/rBO5DHswlXl](https://v0.app/chat/rBO5DHswlXl)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository

@@ -20,6 +20,7 @@ import {
 export default function Portfolio() {
   const heroRef = useRef(null)
   const skillsRef = useRef(null)
+  const [activeSection, setActiveSection] = useState("about")
   const [typedText, setTypedText] = useState("")
   const [showSpaceship, setShowSpaceship] = useState(false)
   const [spaceshipAnimationComplete, setSpaceshipAnimationComplete] = useState(false)
@@ -90,25 +91,45 @@ export default function Portfolio() {
   }, [])
 
   useEffect(() => {
+    const sections = ["about", "education", "experience", "projects", "professional-development", "contact"]
+
     const observerOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
+      threshold: 0.3,
+      rootMargin: "-100px 0px -50% 0px",
     }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          const sectionId = entry.target.id
+          if (sections.includes(sectionId)) {
+            setActiveSection(sectionId)
+          }
           entry.target.classList.add("animate-in")
         }
       })
     }, observerOptions)
 
-    document.querySelectorAll(".fade-in-section").forEach((el) => {
-      observer.observe(el)
+    document.querySelectorAll(".fade-in-section").forEach((section) => {
+      observer.observe(section)
     })
 
     return () => observer.disconnect()
   }, [])
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      const offset = 100 // Offset for fixed nav
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      })
+    }
+  }
 
   const AnimatedNumber = ({ end, duration = 2000 }: { end: number; duration?: number }) => {
     const [count, setCount] = useState(0)
@@ -202,78 +223,106 @@ export default function Portfolio() {
         ))}
       </div>
 
+      {/* Cosmic orbs */}
+      <div className="cosmic-orb cosmic-orb-1" />
+      <div className="cosmic-orb cosmic-orb-2" />
+      <div className="cosmic-orb cosmic-orb-3" />
+
+      {/* Orbiting planets */}
       <div className="planet planet-1" />
       <div className="planet planet-2" />
       <div className="planet planet-3" />
       <div className="planet planet-ring" />
 
-      <div className="cosmic-orb cosmic-orb-1" />
-      <div className="cosmic-orb cosmic-orb-2" />
-      <div className="cosmic-orb cosmic-orb-3" />
-
-      <div className="pattern-grid fixed inset-0 pointer-events-none opacity-30" />
-
-      {showSpaceship && (
-        <div className="spaceship">
-          <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Main disc body with metallic gradient */}
-            <ellipse cx="60" cy="45" rx="50" ry="20" fill="url(#metalGradient)" opacity="0.95" />
-
-            {/* Darker bottom layer for depth */}
-            <ellipse cx="60" cy="48" rx="48" ry="18" fill="url(#darkMetal)" opacity="0.8" />
-
-            {/* Top highlight layer */}
-            <ellipse cx="60" cy="42" rx="45" ry="16" fill="url(#lightMetal)" opacity="0.7" />
-
-            {/* Glass cockpit dome */}
-            <ellipse cx="60" cy="35" rx="20" ry="18" fill="url(#glassGradient)" opacity="0.85" />
-
-            {/* Inner cockpit glow */}
-            <ellipse cx="60" cy="38" rx="15" ry="13" fill="url(#cockpitGlow)" opacity="0.6" />
-
-            {/* Subtle rim lights */}
-            <ellipse cx="60" cy="44" rx="50" ry="2" fill="#38bdf8" opacity="0.4" />
-            <ellipse cx="60" cy="46" rx="48" ry="1.5" fill="#06b6d4" opacity="0.3" />
-
-            {/* Bottom engine glow (subtle) */}
-            <ellipse cx="60" cy="55" rx="30" ry="8" fill="url(#engineGlow)" opacity="0.5" />
-
-            {/* Define gradients */}
-            <defs>
-              <linearGradient id="metalGradient" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#cbd5e1" />
-                <stop offset="50%" stopColor="#94a3b8" />
-                <stop offset="100%" stopColor="#64748b" />
-              </linearGradient>
-
-              <linearGradient id="darkMetal" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#475569" />
-                <stop offset="100%" stopColor="#1e293b" />
-              </linearGradient>
-
-              <linearGradient id="lightMetal" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stopColor="#f1f5f9" opacity="0.8" />
-                <stop offset="100%" stopColor="#cbd5e1" opacity="0.3" />
-              </linearGradient>
-
-              <radialGradient id="glassGradient">
-                <stop offset="0%" stopColor="#e0f2fe" opacity="0.6" />
-                <stop offset="70%" stopColor="#7dd3fc" opacity="0.3" />
-                <stop offset="100%" stopColor="#0891b2" opacity="0.2" />
-              </radialGradient>
-
-              <radialGradient id="cockpitGlow">
-                <stop offset="0%" stopColor="#22d3ee" opacity="0.7" />
-                <stop offset="100%" stopColor="#06b6d4" opacity="0.2" />
-              </radialGradient>
-
-              <radialGradient id="engineGlow">
-                <stop offset="0%" stopColor="#38bdf8" opacity="0.6" />
-                <stop offset="100%" stopColor="transparent" />
-              </radialGradient>
-            </defs>
-          </svg>
+      <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 animate-fade-in-up">
+        <div className="flex items-center gap-2 px-4 py-2 glass rounded-full border border-white/10 shadow-2xl backdrop-blur-xl">
+          {[
+            { id: "about", label: "About" },
+            { id: "education", label: "Education" },
+            { id: "experience", label: "Experience" },
+            { id: "projects", label: "Projects" },
+            { id: "professional-development", label: "Professional Development" },
+            { id: "contact", label: "Contact" },
+          ].map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
+                activeSection === item.id
+                  ? "bg-cyan-500/30 text-cyan-300 border border-cyan-400/40 shadow-lg shadow-cyan-500/20"
+                  : "text-white/70 hover:text-white hover:bg-white/10 border border-transparent"
+              }`}
+            >
+              {item.label}
+            </button>
+          ))}
         </div>
+      </nav>
+
+      {/* Spaceship Animation */}
+      {showSpaceship && (
+        <>
+          <div className="spaceship">
+            <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+              {/* Main disc body with metallic gradient */}
+              <ellipse cx="60" cy="45" rx="50" ry="20" fill="url(#metalGradient)" opacity="0.95" />
+
+              {/* Darker bottom layer for depth */}
+              <ellipse cx="60" cy="48" rx="48" ry="18" fill="url(#darkMetal)" opacity="0.8" />
+
+              {/* Top highlight layer */}
+              <ellipse cx="60" cy="42" rx="45" ry="16" fill="url(#lightMetal)" opacity="0.7" />
+
+              {/* Glass cockpit dome */}
+              <ellipse cx="60" cy="35" rx="20" ry="18" fill="url(#glassGradient)" opacity="0.85" />
+
+              {/* Inner cockpit glow */}
+              <ellipse cx="60" cy="38" rx="15" ry="13" fill="url(#cockpitGlow)" opacity="0.6" />
+
+              {/* Subtle rim lights */}
+              <ellipse cx="60" cy="44" rx="50" ry="2" fill="#38bdf8" opacity="0.4" />
+              <ellipse cx="60" cy="46" rx="48" ry="1.5" fill="#06b6d4" opacity="0.3" />
+
+              {/* Bottom engine glow (subtle) */}
+              <ellipse cx="60" cy="55" rx="30" ry="8" fill="url(#engineGlow)" opacity="0.5" />
+
+              {/* Define gradients */}
+              <defs>
+                <linearGradient id="metalGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#cbd5e1" />
+                  <stop offset="50%" stopColor="#94a3b8" />
+                  <stop offset="100%" stopColor="#64748b" />
+                </linearGradient>
+
+                <linearGradient id="darkMetal" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor="#475569" />
+                  <stop offset="100%" stopColor="#1e293b" />
+                </linearGradient>
+
+                <linearGradient id="lightMetal" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#f1f5f9" opacity="0.8" />
+                  <stop offset="100%" stopColor="#cbd5e1" opacity="0.3" />
+                </linearGradient>
+
+                <radialGradient id="glassGradient">
+                  <stop offset="0%" stopColor="#e0f2fe" opacity="0.6" />
+                  <stop offset="70%" stopColor="#7dd3fc" opacity="0.3" />
+                  <stop offset="100%" stopColor="#0891b2" opacity="0.2" />
+                </radialGradient>
+
+                <radialGradient id="cockpitGlow">
+                  <stop offset="0%" stopColor="#22d3ee" opacity="0.7" />
+                  <stop offset="100%" stopColor="#06b6d4" opacity="0.2" />
+                </radialGradient>
+
+                <radialGradient id="engineGlow">
+                  <stop offset="0%" stopColor="#38bdf8" opacity="0.6" />
+                  <stop offset="100%" stopColor="transparent" />
+                </radialGradient>
+              </defs>
+            </svg>
+          </div>
+        </>
       )}
 
       {/* Hero Section */}
@@ -319,9 +368,8 @@ export default function Portfolio() {
               </a>
             </Button>
             <Button
-              variant="outline"
               size="lg"
-              className="rounded-full gap-2 px-8 glass bg-transparent border-cyan-500/30 hover:border-cyan-500 hover:bg-cyan-500/10"
+              className="rounded-full gap-2 px-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 shadow-lg shadow-purple-500/20 animate-pulse-subtle"
               asChild
             >
               <a href="/Suleman-Chaudhary-Resume.pdf" download="Suleman_Chaudhary_Resume.pdf">
@@ -339,7 +387,7 @@ export default function Portfolio() {
               asChild
             >
               <a href="https://linkedin.com/in/suleman-chaudhary/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-12 h-12" />
+                <Linkedin className="w-16 h-16" />
               </a>
             </Button>
             <Button
@@ -349,7 +397,7 @@ export default function Portfolio() {
               asChild
             >
               <a href="mailto:Chaudhary.98@Buckeyemail.osu.edu">
-                <Mail className="w-12 h-12" />
+                <Mail className="w-16 h-16" />
               </a>
             </Button>
             <Button
@@ -359,7 +407,7 @@ export default function Portfolio() {
               asChild
             >
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <Github className="w-12 h-12" />
+                <Github className="w-16 h-16" />
               </a>
             </Button>
           </div>
@@ -374,7 +422,7 @@ export default function Portfolio() {
       {/* Main Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 space-y-32">
         {/* About Section */}
-        <section className="fade-in-section">
+        <section id="about" className="fade-in-section">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full glass flex items-center justify-center border border-cyan-500/20">
               <GraduationCap className="w-6 h-6 text-cyan-400" />
@@ -393,7 +441,7 @@ export default function Portfolio() {
               {" at "}
               <span className="text-cyan-400 font-semibold">Ohio State University</span>
               {", pursuing my bachelor's degree with an expected graduation in "}
-              <span className="text-cyan-400 font-semibold">December 2026</span>
+              {"December 2026"}
               {". My focus is on "}
               <span className="text-emerald-400 font-semibold">data analytics and data science</span>
               {
@@ -430,7 +478,7 @@ export default function Portfolio() {
         </section>
 
         {/* Education Section */}
-        <section className="fade-in-section">
+        <section id="education" className="fade-in-section">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full glass flex items-center justify-center border border-cyan-500/20">
               <GraduationCap className="w-6 h-6 text-cyan-400" />
@@ -493,7 +541,7 @@ export default function Portfolio() {
         </section>
 
         {/* Experience Section */}
-        <section className="fade-in-section">
+        <section id="experience" className="fade-in-section">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full glass flex items-center justify-center border border-cyan-500/20">
               <Briefcase className="w-6 h-6 text-cyan-400" />
@@ -609,7 +657,7 @@ export default function Portfolio() {
         </section>
 
         {/* Projects Section */}
-        <section className="fade-in-section">
+        <section id="projects" className="fade-in-section">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full glass flex items-center justify-center border border-cyan-500/20">
               <Code className="w-6 h-6 text-cyan-400" />
@@ -849,7 +897,7 @@ export default function Portfolio() {
         </section>
 
         {/* Skills & Certifications */}
-        <section className="fade-in-section">
+        <section id="professional-development" className="fade-in-section">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full glass flex items-center justify-center border border-cyan-500/20">
               <Award className="w-6 h-6 text-cyan-400" />
@@ -1143,7 +1191,7 @@ export default function Portfolio() {
         </section>
 
         {/* Contact Section */}
-        <section className="fade-in-section">
+        <section id="contact" className="fade-in-section">
           <div className="glass rounded-2xl p-12 text-center border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 mb-12">
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Let's Connect

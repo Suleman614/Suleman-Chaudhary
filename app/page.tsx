@@ -386,7 +386,7 @@ export default function Portfolio() {
               className="rounded-full gap-2 px-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 shadow-lg shadow-purple-500/20 animate-pulse-subtle"
               asChild
             >
-              <a href="/Suleman-Chaudhary-Resume.pdf" download="Suleman_Chaudhary_Resume.pdf">
+              <a href="/Suleman Chaudhary resume .pdf" download="Suleman_Chaudhary_Resume.pdf">
                 <FileDown className="w-5 h-5" />
                 Download Resume
               </a>
@@ -468,7 +468,7 @@ export default function Portfolio() {
               <span className="text-emerald-400 font-semibold">data wrangling and exploratory analysis</span>
               {" to "}
               <span className="text-emerald-400 font-semibold">modeling and visualization</span>
-              {", through coursework, projects, and leadership. I'm actively involved in the "}
+              {", through coursework, projects, leadership, and hands on work experience. I'm actively involved in the "}
               <span className="text-blue-400 font-semibold">Big Data and Analytics Association</span>
               {", where I help lead the "}
               <span className="text-blue-400 font-semibold">Data Science track</span>
@@ -524,14 +524,14 @@ export default function Portfolio() {
               <h4 className="text-xl font-bold text-foreground mb-4">Relevant Coursework</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div className="text-muted-foreground">
-                  <span className="text-cyan-400 font-semibold">CSE 2123</span> — Data Structures Using Java
+                  <span className="text-cyan-400 font-semibold">CSE 2123</span> — Data Structures and Algorithms
                 </div>
                 <div className="text-muted-foreground">
                   <span className="text-cyan-400 font-semibold">CSE 2111</span> — Modeling & Problem Solving with
                   Spreadsheets and Databases
                 </div>
                 <div className="text-muted-foreground">
-                  <span className="text-cyan-400 font-semibold">BUSOBA 2320</span> — Statistical Techniques
+                  <span className="text-cyan-400 font-semibold">BUSOBA 2320</span> — Applied Statistical Analysis and Techniques
                 </div>
                 <div className="text-muted-foreground">
                   <span className="text-cyan-400 font-semibold">BUSOBA 2321</span> — Business Analytics
@@ -687,10 +687,17 @@ export default function Portfolio() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="glass rounded-2xl p-8 border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-500 hover:shadow-xl hover:shadow-emerald-500/20 hover:-translate-y-2 group">
               <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-semibold group-hover:text-cyan-400 transition-colors">
-                  United States Emissions Breakdown
-                </h3>
-                <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-cyan-400 transition-colors cursor-pointer" />
+                <a
+                  href="/Suleman Emissions Dashboard.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start justify-between w-full"
+                >
+                  <h3 className="text-xl font-semibold group-hover:text-cyan-400 transition-colors">
+                    United States Emissions Breakdown
+                  </h3>
+                  <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-cyan-400 transition-colors cursor-pointer" />
+                </a>
               </div>
               <div className="flex items-center gap-2 mb-3">
                 <div className="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30">
@@ -698,16 +705,16 @@ export default function Portfolio() {
                 </div>
               </div>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Built an interactive analytics dashboard using EPA emissions data to examine greenhouse gas emissions
-                across the continental United States. Cleaned and aggregated county level data in Databricks using SQL
-                to analyze emissions by state and county, explore population based patterns, and identify regions that
-                contribute disproportionately to total emissions.
+                Built an interactive Databricks analytics dashboard using EPA emissions data to examine greenhouse gas
+                emissions across the continental United States. Cleaned and aggregated county level data using SQL in
+                Databricks to analyze emissions by state and county, explore population based patterns, and identify
+                regions that contribute disproportionately to total emissions.
               </p>
               <div className="mb-4 p-3 rounded-lg bg-muted/30 border border-emerald-500/20">
                 <p className="text-xs text-muted-foreground mb-1">Technical Challenge:</p>
                 <p className="text-sm">
-                  Cleaning messy numeric fields, aggregating large geospatial datasets, and designing clear,
-                  insight-driven visualizations from raw environmental data
+                  Cleaning inconsistent numeric fields, combining large geospatial datasets, and designing clear
+                  insight driven visualizations from raw EPA environmental data.
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
@@ -768,6 +775,9 @@ export default function Portfolio() {
                 <span className="text-xs px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 border border-pink-500/20">
                   Federal Reserve API
                 </span>
+                <span className="text-xs px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  Quantitative Finance &amp; Portfolio Visualization
+                </span>
               </div>
             </a>
 
@@ -795,6 +805,12 @@ export default function Portfolio() {
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
                   MySQL
+                </span>
+                <span className="text-xs px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  ETL
+                </span>
+                <span className="text-xs px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                  Steam API
                 </span>
                 <span className="text-xs px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
                   R
@@ -879,8 +895,10 @@ export default function Portfolio() {
                 </div>
               </div>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Navigation app for visually impaired users leveraging AWS Rekognition and Apple LiDAR with real-time
-                text-to-speech feedback and obstacle detection.
+                Navigation app for visually impaired users that uses AWS Rekognition, Apple LiDAR, machine learning,
+                and S3 storage to identify objects, read text, and deliver real time spoken guidance. When the user
+                scans their surroundings, the system recognizes items, extracts visible text, estimates distance and
+                direction, and provides clear text to speech feedback to support safe and independent navigation.
               </p>
               <div className="mb-4 p-3 rounded-lg bg-muted/30 border border-pink-500/20">
                 <p className="text-xs text-muted-foreground mb-1">Technical Challenge:</p>
@@ -1040,24 +1058,25 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <a
-              href="/certificates/Databricks-AI-BI.png"
+              href="/certificates/Suleman Google Data Analyticis Cert.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass rounded-2xl p-8 border-purple-500/20 hover:border-purple-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1 group cursor-pointer"
+              className="glass rounded-2xl p-8 border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-indigo-500/20 hover:-translate-y-1 group cursor-pointer"
             >
               <div className="flex items-start gap-4">
-                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <Award className="w-7 h-7 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-semibold text-lg mb-1 group-hover:text-purple-400 transition-colors">
-                    Databricks AI/BI for Data Analysts
+                  <h4 className="font-semibold text-lg mb-1 group-hover:text-indigo-400 transition-colors">
+                    Google Data Analytics Professional
                   </h4>
-                  <p className="text-sm text-muted-foreground mb-2">Databricks • October 2025</p>
+                  <p className="text-sm text-muted-foreground mb-2">Google • August 2025</p>
                   <p className="text-xs text-muted-foreground">
-                    Advanced certification in AI-powered business intelligence and analytics
+                    Coursework in SQL, Tableau, R, and spreadsheets with hands on projects in preparing, analyzing,
+                    and visualizing data.
                   </p>
-                  <div className="flex items-center gap-1 mt-2 text-xs text-purple-400 group-hover:text-purple-300">
+                  <div className="flex items-center gap-1 mt-2 text-xs text-indigo-400 group-hover:text-indigo-300">
                     <ExternalLink className="w-3 h-3" />
                     <span>View Certificate</span>
                   </div>
@@ -1066,7 +1085,7 @@ export default function Portfolio() {
             </a>
 
             <a
-              href="/certificates/Databricks-SQL-Analytics.png"
+              href="/certificates/Suleman SQL Analytics Databricks Cert.png"
               target="_blank"
               rel="noopener noreferrer"
               className="glass rounded-2xl p-8 border-blue-500/20 hover:border-blue-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1 group cursor-pointer"
@@ -1081,7 +1100,7 @@ export default function Portfolio() {
                   </h4>
                   <p className="text-sm text-muted-foreground mb-2">Databricks • October 2025</p>
                   <p className="text-xs text-muted-foreground">
-                    Expertise in SQL-based analytics and data warehousing on Databricks
+                    Certification covering SQL analytics, querying data, and building dashboards in Databricks.
                   </p>
                   <div className="flex items-center gap-1 mt-2 text-xs text-blue-400 group-hover:text-blue-300">
                     <ExternalLink className="w-3 h-3" />
@@ -1092,24 +1111,25 @@ export default function Portfolio() {
             </a>
 
             <a
-              href="/certificates/Google-Data-Analytics.pdf"
+              href="/certificates/Suleman AiBi Databricks Cert.png"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass rounded-2xl p-8 border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-indigo-500/20 hover:-translate-y-1 group cursor-pointer"
+              className="glass rounded-2xl p-8 border-purple-500/20 hover:border-purple-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1 group cursor-pointer"
             >
               <div className="flex items-start gap-4">
-                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <Award className="w-7 h-7 text-white" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-semibold text-lg mb-1 group-hover:text-indigo-400 transition-colors">
-                    Google Data Analytics Professional
+                  <h4 className="font-semibold text-lg mb-1 group-hover:text-purple-400 transition-colors">
+                    Databricks AI/BI for Data Analysts
                   </h4>
-                  <p className="text-sm text-muted-foreground mb-2">Google</p>
+                  <p className="text-sm text-muted-foreground mb-2">Databricks • October 2025</p>
                   <p className="text-xs text-muted-foreground">
-                    Professional certification in data analysis and visualization
+                    Certification focused on AI assisted analytics, BI workflows, and applying data intelligence in
+                    Databricks.
                   </p>
-                  <div className="flex items-center gap-1 mt-2 text-xs text-indigo-400 group-hover:text-indigo-300">
+                  <div className="flex items-center gap-1 mt-2 text-xs text-purple-400 group-hover:text-purple-300">
                     <ExternalLink className="w-3 h-3" />
                     <span>View Certificate</span>
                   </div>
@@ -1179,11 +1199,12 @@ export default function Portfolio() {
                   <BarChart3 className="w-5 h-5 text-cyan-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Big Data & Analytics Association – Data Science Track Lead</h4>
+                  <h4 className="font-semibold mb-2">Big Data and Analytics Association – Data Science Track Lead</h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Led 100+ students in the Data Science & Analytics Track, teaching Python and using Kaggle for
-                    workshops on data cleaning, exploratory analysis, statistical techniques, visualization, and
-                    storytelling, with team projects showcased at the end of semester Research Gala.
+                    Led 100 plus students in the Data Science Track by designing and teaching hands on workshops
+                    covering Python, data wrangling, exploratory analysis, statistics, visualization, and Kaggle based
+                    project work. Created guided exercises and coordinated end of semester team projects showcased at
+                    the BDAA Research Gala, strengthening technical confidence and project execution across the cohort.
                   </p>
                 </div>
               </div>
@@ -1192,11 +1213,14 @@ export default function Portfolio() {
                   <Award className="w-5 h-5 text-pink-400" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">HackOHI/O 2025 – SeeWithYou (4th Place out of 100+ Teams)</h4>
+                  <h4 className="font-semibold mb-2">HackOHI/O 2025 – SeeWithYou (4th Place out of 50+ Teams)</h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Developed a navigation app for visually impaired users leveraging AWS Rekognition, Apple LiDAR, and
-                    AWS S3 to analyze images and deliver text-to-speech feedback describing objects, distance, and
-                    direction.
+                    Built an award winning accessibility tool for visually impaired users using AWS Rekognition, Apple
+                    LiDAR, and AWS S3 for real time object detection, spatial guidance, and text to speech feedback.
+                    Developed the machine learning pipeline that identifies objects, estimates distance and direction,
+                    reads text, and provides spoken guidance. Completed design and development under a strict twenty
+                    four hour hackathon deadline and presented to an industry judging panel, earning a top five finish
+                    out of more than fifty teams.
                   </p>
                 </div>
               </div>

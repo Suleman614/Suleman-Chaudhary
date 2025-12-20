@@ -1,61 +1,61 @@
-# Suleman Chaudhary Portfolio
+# Portfolio Website Repository
 
-Personal data analytics and data science portfolio built with Next.js and Tailwind CSS.
+This repository contains the source code for my personal portfolio website. It showcases my projects, certifications, experience, and professional development as I pursue roles in data science, data analytics and business analytics.
 
-## Overview
+---
 
-- Single-page portfolio with sections for About, Projects, Skills, Certifications, Leadership, and Contact.
-- Static assets (resume, certificates, images) served from `public/`.
-- Content is authored directly in `app/page.tsx`.
+## Live Website
 
-## Tech Stack
+The portfolio is available at:  
 
-- Next.js (App Router)
-- React + TypeScript
-- Tailwind CSS
-- Vercel Analytics
+---
 
-## Getting Started
+## Repository Structure
 
-Install dependencies:
+/public  
+ /images  Project screenshots and media  
+ /certs  Certification PDFs and images  
+ resume.pdf Downloadable resume
 
-```bash
-npm install
-```
+/src  
+ /components Reusable UI components  
+ /app   Main routing and pages  
+ /sections About, Skills, Projects, Experience, Certifications
 
-Run the dev server:
+README.md
 
-```bash
-npm run dev
-```
+---
 
-Build for production:
+## Purpose of This Repository
 
-```bash
-npm run build
-```
+- Store and manage the full source code for my portfolio  
+- Track updates to my projects, certifications, and professional experience  
+- Maintain a clean and organized online presence for internship recruiting  
+- Serve as a central place for continued site improvements and version control
 
-Start the production server:
-
-```bash
-npm run start
-```
-
-## Content Updates
-
-- Main content: `app/page.tsx`
-- Global styles: `app/globals.css`
-- Assets: `public/`
-
-### Key Assets
-
-- Resume: `public/Suleman Chaudhary resume .pdf`
-- Certificates:
-  - `public/certificates/Suleman Google Data Analyticis Cert.pdf`
-  - `public/certificates/Suleman AiBi Databricks Cert.png`
-  - `public/certificates/Suleman SQL Analytics Databricks Cert.png`
+---
 
 ## Deployment
 
-This app can be deployed on any Next.js-compatible platform (Vercel, Netlify, etc.).
+The site is deployed on.  
+Every push to the main branch triggers an automatic redeploy.
+
+---
+
+## Contact
+
+If you would like to connect:
+
+**Email:** Chaudhary.98@buckeyemail.osu.edu  
+**LinkedIn:** https://linkedin.com/in/suleman-chaudhary  
+**GitHub:** https://github.com/Suleman614
+
+---
+
+## License
+
+This project can be shared for educational or portfolio review purposes.  
+If you would like to reuse any part of the design or code, please request permission first.
+
+
 

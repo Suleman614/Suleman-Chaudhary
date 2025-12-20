@@ -386,7 +386,7 @@ export default function Portfolio() {
               className="rounded-full gap-2 px-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 shadow-lg shadow-purple-500/20 animate-pulse-subtle"
               asChild
             >
-              <a href="/Suleman Chaudhary resume .pdf" download="Suleman_Chaudhary_Resume.pdf">
+              <a href="Suleman Chaudhary resume .pdf" download="Suleman_Chaudhary_Resume.pdf">
                 <FileDown className="w-5 h-5" />
                 Download Resume
               </a>
@@ -688,7 +688,7 @@ export default function Portfolio() {
             <div className="glass rounded-2xl p-8 border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-500 hover:shadow-xl hover:shadow-emerald-500/20 hover:-translate-y-2 group">
               <div className="flex items-start justify-between mb-4">
                 <a
-                  href="/Suleman Emissions Dashboard.png"
+                  href="Suleman Emissions Dashboard.png"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start justify-between w-full"
@@ -1058,7 +1058,7 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <a
-              href="/certificates/Suleman Google Data Analyticis Cert.pdf"
+              href="certificates/Suleman Google Data Analyticis Cert.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="glass rounded-2xl p-8 border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-indigo-500/20 hover:-translate-y-1 group cursor-pointer"
@@ -1085,7 +1085,7 @@ export default function Portfolio() {
             </a>
 
             <a
-              href="/certificates/Suleman SQL Analytics Databricks Cert.png"
+              href="certificates/Suleman SQL Analytics Databricks Cert.png"
               target="_blank"
               rel="noopener noreferrer"
               className="glass rounded-2xl p-8 border-blue-500/20 hover:border-blue-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1 group cursor-pointer"
@@ -1111,7 +1111,7 @@ export default function Portfolio() {
             </a>
 
             <a
-              href="/certificates/Suleman AiBi Databricks Cert.png"
+              href="certificates/Suleman AiBi Databricks Cert.png"
               target="_blank"
               rel="noopener noreferrer"
               className="glass rounded-2xl p-8 border-purple-500/20 hover:border-purple-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1 group cursor-pointer"

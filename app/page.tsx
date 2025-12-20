@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useMemo, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import {
   GraduationCap,
@@ -27,6 +27,20 @@ export default function Portfolio() {
   const [animatedName, setAnimatedName] = useState("")
   const fullText = "Data Scientist & Analyst"
   const fullName = "Suleman Chaudhary"
+  const stars = useMemo(() => {
+    let seed = 1337
+    const random = () => {
+      seed = (seed * 1664525 + 1013904223) % 2 ** 32
+      return seed / 2 ** 32
+    }
+
+    return Array.from({ length: 150 }).map(() => ({
+      left: `${random() * 100}%`,
+      top: `${random() * 100}%`,
+      animationDuration: `${random() * 3 + 2}s`,
+      animationDelay: `${random() * 3}s`,
+    }))
+  }, [])
 
   useEffect(() => {
     const hasAnimationPlayed = sessionStorage.getItem("spaceshipAnimationPlayed")
@@ -94,8 +108,8 @@ export default function Portfolio() {
     const sections = ["about", "education", "experience", "projects", "professional-development", "contact"]
 
     const observerOptions = {
-      threshold: 0.3,
-      rootMargin: "-100px 0px -50% 0px",
+      threshold: 0.1,
+      rootMargin: "0px 0px -20% 0px",
     }
 
     const observer = new IntersectionObserver((entries) => {
@@ -209,15 +223,15 @@ export default function Portfolio() {
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
       {/* Background Pattern with animated gradient orbs */}
       <div className="stars">
-        {Array.from({ length: 150 }).map((_, i) => (
+        {stars.map((star, i) => (
           <div
             key={i}
             className="star"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDuration: `${Math.random() * 3 + 2}s`,
-              animationDelay: `${Math.random() * 3}s`,
+              left: star.left,
+              top: star.top,
+              animationDuration: star.animationDuration,
+              animationDelay: star.animationDelay,
             }}
           />
         ))}
@@ -387,7 +401,7 @@ export default function Portfolio() {
               asChild
             >
               <a href="https://linkedin.com/in/suleman-chaudhary/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-16 h-16" />
+                <Linkedin className="size-[30px]" />
               </a>
             </Button>
             <Button
@@ -397,7 +411,7 @@ export default function Portfolio() {
               asChild
             >
               <a href="mailto:Chaudhary.98@Buckeyemail.osu.edu">
-                <Mail className="w-16 h-16" />
+                <Mail className="size-[30px]" />
               </a>
             </Button>
             <Button
@@ -407,7 +421,7 @@ export default function Portfolio() {
               asChild
             >
               <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                <Github className="w-16 h-16" />
+                <Github className="size-[30px]" />
               </a>
             </Button>
           </div>

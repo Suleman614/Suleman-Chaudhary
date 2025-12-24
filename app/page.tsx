@@ -270,6 +270,13 @@ export default function Portfolio() {
               {item.label}
             </button>
           ))}
+          <a
+            href="Suleman Chaudhary resume .pdf"
+            download="Suleman_Chaudhary_Resume.pdf"
+            className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap text-white/70 hover:text-white hover:bg-white/10 border border-transparent"
+          >
+            View Resume (PDF)
+          </a>
         </div>
       </nav>
 
@@ -388,7 +395,7 @@ export default function Portfolio() {
             >
               <a href="Suleman Chaudhary resume .pdf" download="Suleman_Chaudhary_Resume.pdf">
                 <FileDown className="w-5 h-5" />
-                Download Resume
+                View Resume (PDF)
               </a>
             </Button>
           </div>
@@ -627,25 +634,26 @@ export default function Portfolio() {
                   <span>
                     Applied <span className="text-cyan-400 font-semibold">data driven decision making</span> by building
                     KPI dashboards in Excel and Tableau to track sales trends, inventory turnover, and customer
-                    retention, enabling timely adjustments to marketing and pricing strategies
+                    retention, enabling adjustments to marketing and pricing strategies.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                   <span>
                     Designed and executed <span className="text-blue-400 font-semibold">A/B tests</span> on product
-                    listing layouts, using statistical analysis to determine significance, leading to a{" "}
+                    listing layouts, using statistical analysis to determine significance, which led to a{" "}
                     <span className="text-blue-400 font-semibold">9% increase in click through rate</span> on select
-                    product listings and increased monthly revenue
+                    product listings and increased monthly revenue.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
                   <span>
                     Wrote <span className="text-purple-400 font-semibold">SQL queries</span> to extract and segment
-                    sales and customer data from multiple sources, using Excel pivot tables, XLOOKUP, and trend analysis
-                    to identify patterns that improved repeat purchase rates by{" "}
+                    sales and customer data from multiple sources, used Excel for pivot tables, XLOOKUP, and trend
+                    analysis to identify patterns that improved repeat purchase rate by{" "}
                     <span className="text-purple-400 font-semibold">7%</span>
+                    .
                   </span>
                 </li>
               </ul>

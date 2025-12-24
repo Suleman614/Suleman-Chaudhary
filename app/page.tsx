@@ -272,7 +272,8 @@ export default function Portfolio() {
           ))}
           <a
             href="Suleman Chaudhary resume .pdf"
-            download="Suleman_Chaudhary_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap text-white/70 hover:text-white hover:bg-white/10 border border-transparent"
           >
             View Resume (PDF)
@@ -393,7 +394,7 @@ export default function Portfolio() {
               className="rounded-full gap-2 px-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 shadow-lg shadow-purple-500/20 animate-pulse-subtle"
               asChild
             >
-              <a href="Suleman Chaudhary resume .pdf" download="Suleman_Chaudhary_Resume.pdf">
+              <a href="Suleman Chaudhary resume .pdf" target="_blank" rel="noopener noreferrer">
                 <FileDown className="w-5 h-5" />
                 View Resume (PDF)
               </a>

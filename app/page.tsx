@@ -593,10 +593,48 @@ export default function Portfolio() {
                   Jan 2026 - Apr 2026
                 </span>
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Working with the Pacers analytics team on player performance analysis, game strategy optimization, and
-                data-driven insights for basketball operations.
-              </p>
+              <ul className="space-y-3 text-muted-foreground leading-relaxed mb-4">
+                <li className="flex items-start gap-3">
+                  <TrendingUp className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
+                  <span>
+                    Worked embedded within the <span className="text-cyan-400 font-semibold">Pacers Analytics team</span>{" "}
+                    on ticketing and revenue analytics across Indiana Pacers, Indiana Fever, and Gainbridge Fieldhouse
+                    events.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <TrendingUp className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <span>
+                    Applied <span className="text-blue-400 font-semibold">Poisson regression</span> to model
+                    single-game ticket demand and inform <span className="text-blue-400 font-semibold">dynamic pricing</span>{" "}
+                    decisions.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <TrendingUp className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
+                  <span>
+                    Migrated <span className="text-purple-400 font-semibold">3 recurring manual Excel reports</span> to
+                    automated Databricks and Tableau pipelines, reducing weekly processing overhead for the Analytics
+                    team.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <TrendingUp className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                  <span>
+                    Built and maintained <span className="text-emerald-400 font-semibold">Tableau dashboards</span>{" "}
+                    surfacing ticket sales metrics, attendance trends, and pricing recommendations to senior leadership
+                    within the Ticket Sales department.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <TrendingUp className="w-5 h-5 text-pink-400 mt-0.5 flex-shrink-0" />
+                  <span>
+                    Conducted <span className="text-pink-400 font-semibold">NBA Draft prospect analysis</span> by
+                    aggregating and visualizing advanced player metrics in Python and Tableau to support front office
+                    scouting discussions.
+                  </span>
+                </li>
+              </ul>
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
                   Python
@@ -608,10 +646,13 @@ export default function Portfolio() {
                   Tableau
                 </span>
                 <span className="text-xs px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 border border-pink-500/20">
-                  Predictive Modeling
+                  Databricks
                 </span>
                 <span className="text-xs px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                  Feature Engineering
+                  Poisson Regression
+                </span>
+                <span className="text-xs px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                  Dynamic Pricing
                 </span>
               </div>
             </div>

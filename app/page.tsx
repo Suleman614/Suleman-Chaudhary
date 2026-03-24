@@ -597,8 +597,17 @@ export default function Portfolio() {
                 <li className="flex items-start gap-3">
                   <TrendingUp className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
                   <span>
-                    Applied Poisson regression to model single game ticket demand and inform dynamic pricing decisions
-                    across Indiana Pacers, Indiana Fever, and Gainbridge Fieldhouse events.
+                    Worked embedded within the <span className="text-cyan-400 font-semibold">Pacers Analytics team</span>{" "}
+                    on ticketing and revenue analytics across Indiana Pacers, Indiana Fever, and Gainbridge Fieldhouse
+                    events.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <TrendingUp className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <span>
+                    Applied <span className="text-blue-400 font-semibold">Poisson regression</span> to model
+                    single game ticket demand and inform <span className="text-blue-400 font-semibold">dynamic pricing</span>{" "}
+                    decisions.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">

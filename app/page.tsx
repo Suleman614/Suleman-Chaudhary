@@ -493,8 +493,8 @@ export default function Portfolio() {
               }
             </p>
             <p className="text-lg text-cyan-400 font-semibold mt-8 leading-relaxed">
-              Actively seeking Data Analyst, Business Analyst, and Data Science internship opportunities for Summer
-              2026.
+              Actively seeking Data Analyst, Business Analyst, and Data Science new grad opportunities starting in
+              2027.
             </p>
           </div>
         </section>
@@ -524,7 +524,7 @@ export default function Portfolio() {
               <div className="flex flex-col gap-1 text-right shrink-0">
                 <div className="text-xl font-bold text-foreground">Expected Graduation</div>
                 <div className="text-xl font-bold text-foreground">December 2026</div>
-                <div className="text-xl font-bold text-foreground mt-2">GPA: 3.97 • Dean&apos;s List</div>
+                <div className="text-xl font-bold text-foreground mt-2">GPA: 3.71 • Dean&apos;s List</div>
               </div>
             </div>
 
@@ -597,41 +597,34 @@ export default function Portfolio() {
                 <li className="flex items-start gap-3">
                   <TrendingUp className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
                   <span>
-                    Worked embedded within the <span className="text-cyan-400 font-semibold">Pacers Analytics team</span>{" "}
-                    on ticketing and revenue analytics across Indiana Pacers, Indiana Fever, and Gainbridge Fieldhouse
-                    events.
+                    Migrated <span className="text-cyan-400 font-semibold">3 recurring Excel reports</span> to
+                    automated Databricks and Tableau pipelines, eliminating roughly{" "}
+                    <span className="text-cyan-400 font-semibold">100 hours of manual reporting</span> annually.
+                    Rebuilt each report&apos;s logic as a scheduled query feeding a live Tableau view, removing
+                    weekly copy-and-paste steps, standardizing output formatting across the Analytics team, and
+                    cutting turnaround time on recurring stakeholder requests.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                   <span>
-                    Applied <span className="text-blue-400 font-semibold">Poisson regression</span> to model
-                    single game ticket demand and inform <span className="text-blue-400 font-semibold">dynamic pricing</span>{" "}
-                    decisions.
+                    Prepared and validated multi-season ticket sales data feeding a{" "}
+                    <span className="text-blue-400 font-semibold">Poisson regression model</span> that forecast
+                    single-game demand across 50+ Pacers, Fever, and Gainbridge Fieldhouse events. Worked on the data
+                    layer supporting the model, reconciling event and pricing fields across seasons, resolving
+                    inconsistencies in historical sales records, and validating inputs before modeling — with outputs
+                    feeding <span className="text-blue-400 font-semibold">dynamic pricing recommendations</span> for
+                    single-game inventory.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
                   <span>
-                    Migrated <span className="text-purple-400 font-semibold">3 recurring manual Excel reports</span> to
-                    automated Databricks and Tableau pipelines, reducing weekly processing overhead for the Analytics
-                    team.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                  <span>
-                    Built and maintained <span className="text-emerald-400 font-semibold">Tableau dashboards</span>{" "}
-                    surfacing ticket sales metrics, attendance trends, and pricing recommendations to senior leadership
-                    within the Ticket Sales department.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <TrendingUp className="w-5 h-5 text-pink-400 mt-0.5 flex-shrink-0" />
-                  <span>
-                    Conducted <span className="text-pink-400 font-semibold">NBA Draft prospect analysis</span> by
-                    aggregating and visualizing advanced player metrics in Python and Tableau to support front office
-                    scouting discussions.
+                    Analyzed ticket sales and attendance data spanning{" "}
+                    <span className="text-purple-400 font-semibold">50K+ transactions</span> to deliver ad hoc
+                    insights on promotional campaign performance. Fielded requests from sales and marketing partners,
+                    translating open-ended business questions into Excel and Tableau analyses covering promo
+                    redemption, attendance lift, and inventory movement across home events.
                   </span>
                 </li>
               </ul>
@@ -667,35 +660,38 @@ export default function Portfolio() {
                   <p className="text-lg text-cyan-400 mb-2">Aizen LLC</p>
                 </div>
                 <span className="text-sm text-muted-foreground px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20">
-                  Mar 2022 - Dec 2025
+                  Mar 2023 - Dec 2025
                 </span>
               </div>
               <ul className="space-y-3 text-muted-foreground leading-relaxed mb-4">
                 <li className="flex items-start gap-3">
                   <TrendingUp className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
                   <span>
-                    Applied <span className="text-cyan-400 font-semibold">data driven decision making</span> by building
-                    KPI dashboards in Excel and Tableau to track sales trends, inventory turnover, and customer
-                    retention, enabling adjustments to marketing and pricing strategies.
+                    Engineered <span className="text-cyan-400 font-semibold">KPI dashboards</span> in Excel and
+                    Tableau tracking sales trends, inventory turnover, and customer retention across 84 SKUs.
+                    Consolidated order, inventory, and customer data into a single reporting view refreshed on a
+                    regular cadence, replacing ad hoc spreadsheet checks and making pricing, restocking, and
+                    marketing decisions faster and better grounded.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                   <span>
                     Designed and executed <span className="text-blue-400 font-semibold">A/B tests</span> on product
-                    listing layouts, using statistical analysis to determine significance, which led to a{" "}
-                    <span className="text-blue-400 font-semibold">9% increase in click through rate</span> on select
-                    product listings and increased monthly revenue.
+                    listing layouts, comparing variants on imagery, title structure, and pricing presentation with
+                    statistical significance testing before rolling out a winner. Testing drove a{" "}
+                    <span className="text-blue-400 font-semibold">9% lift in click-through rate</span> and
+                    contributed to measurable monthly revenue growth.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
                   <span>
                     Wrote <span className="text-purple-400 font-semibold">SQL queries</span> to extract and segment
-                    sales and customer data from multiple sources, used Excel for pivot tables, XLOOKUP, and trend
-                    analysis to identify patterns that improved repeat purchase rate by{" "}
-                    <span className="text-purple-400 font-semibold">7%</span>
-                    .
+                    sales and customer data from multiple sources, then used Excel pivot tables, XLOOKUP, and trend
+                    analysis to identify purchasing patterns by product line, season, and customer tenure. Insights
+                    from this segmentation informed targeting and repeat purchase strategy, improving repeat purchase
+                    rate by <span className="text-purple-400 font-semibold">7%</span>.
                   </span>
                 </li>
               </ul>
@@ -834,23 +830,27 @@ export default function Portfolio() {
             <div className="glass rounded-2xl p-8 border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-2 group">
               <div className="flex items-start justify-between mb-4">
                 <h3 className="text-xl font-semibold group-hover:text-cyan-400 transition-colors">
-                  Predictive Sales Forecasting
+                  Steam Marketplace Analysis
                 </h3>
                 <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-cyan-400 transition-colors cursor-pointer" />
               </div>
               <div className="flex items-center gap-2 mb-3">
                 <div className="px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-500/30">
-                  <span className="text-sm font-semibold text-cyan-400">$1.2M Revenue Opportunity</span>
+                  <span className="text-sm font-semibold text-cyan-400">75K+ Titles Analyzed</span>
                 </div>
               </div>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Built an ETL pipeline integrating 850K+ game sales records from Steam API. Developed ARIMA forecasting
-                models projecting 3.8% YoY growth and $1.2M potential revenue uplift. Designed a Tableau dashboard
-                visualizing sales trends, player retention, and monetization opportunities for stakeholders.
+                Constructed a MySQL and R ETL pipeline processing ~75K Steam titles from the Steam API and Kaggle,
+                transforming raw catalog data into monthly time series features across 15 genres and 5 price tiers.
+                Developed 12-month ARIMA models forecasting release volume trends, identifying 6 high-growth genres
+                and communicating insights through an interactive Tableau dashboard.
               </p>
               <div className="mb-4 p-3 rounded-lg bg-muted/30 border border-cyan-500/20">
                 <p className="text-xs text-muted-foreground mb-1">Technical Challenge:</p>
-                <p className="text-sm">Handling massive dataset and creating accurate time-series forecasts</p>
+                <p className="text-sm">
+                  Transforming a large, inconsistent catalog dataset into reliable monthly time series features and
+                  building accurate 12-month ARIMA forecasts across genres and price tiers
+                </p>
               </div>
               <div className="flex flex-wrap gap-2">
                 <span className="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
@@ -895,14 +895,14 @@ export default function Portfolio() {
               </div>
               <div className="flex items-center gap-2 mb-3">
                 <div className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30">
-                  <span className="text-sm font-semibold text-blue-400">10,000+ Games Analyzed</span>
+                  <span className="text-sm font-semibold text-blue-400">2,500+ Games Analyzed</span>
                 </div>
               </div>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                Led a team of four developing a machine learning web application to predict 2025–26 NBA game outcomes
-                using data from 10,000+ historical games (project in progress). Built a data pipeline for cleaning,
-                feature engineering, and training linear regression models to identify factors influencing team points
-                scored and matchup results.
+                Led a four-person team building a machine learning web app predicting 2025–26 NBA game outcomes;
+                engineered features from 2,500+ historical games and trained linear regression models to forecast
+                team scoring and matchup results. Deployed an interactive site for users to explore schedules,
+                compare predicted scores, and view win probabilities.
               </p>
               <div className="mb-4 p-3 rounded-lg bg-muted/30 border border-blue-500/20">
                 <p className="text-xs text-muted-foreground mb-1">Technical Challenge:</p>
